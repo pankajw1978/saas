@@ -41,6 +41,7 @@
   @include flexAlign();
   gap: 8px;
   padding: 0 7px;
+  cursor: pointer;
 
   .pc-avatar {
     @include box(32px);
@@ -64,6 +65,7 @@
   padding: 0 16px;
   border-radius: 14px;
   box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 
   .cc-icon {
     @include box(16px);

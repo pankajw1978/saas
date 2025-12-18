@@ -15,6 +15,10 @@
   font-size: 16px;
 }
 
+body {
+  scrollbar-width: 0;
+}
+
 .iconbox {
   display: flex;
   align-items: center;
@@ -25,6 +29,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
   position: relative;
+  cursor: pointer;
 
   .ib-count {
     height: 16px;

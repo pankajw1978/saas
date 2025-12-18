@@ -94,6 +94,10 @@
       }
     }
 
+    .scbi-label {
+      color: var(--primary);
+    }
+
     &::after {
       content: "";
       position: absolute;

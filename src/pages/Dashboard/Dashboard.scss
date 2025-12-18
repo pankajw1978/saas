@@ -1,7 +1,7 @@
 @use "../../styles/mixins.scss" as *;
 
 .dashboard {
-  padding: 20px 17px;
+  padding: 20px 38px;
 
   .dashboard-head {
     @include setSpaceBetween();
