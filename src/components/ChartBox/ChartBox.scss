@@ -1,0 +1,106 @@
+@use "../../styles/mixins.scss" as *;
+
+.chart-box-comp {
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 20px 25px;
+  @include verticalFlex();
+  gap: 15px;
+
+  .cbc-header {
+    .cbc-title {
+      @include flexAlign();
+      gap: 10px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .cbc-body {
+    min-height: 150px;
+  }
+}
+
+.marketing-body {
+  @include verticalFlex();
+  gap: 12px;
+
+  .mb-card {
+    border: 1px solid var(--border);
+    padding: 16px;
+    border-radius: 10px;
+    @include setSpaceBetween();
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+
+    .mb-info {
+      @include flexAlign();
+      gap: 16px;
+
+      .mb-title {
+        color: var(--textLight);
+      }
+    }
+
+    .mb-value {
+      &.roas {
+        color: var(--success);
+      }
+    }
+  }
+}
+
+.total-revenue {
+  @include verticalFlex();
+  gap: 20px;
+
+  .tv-top {
+    @include flexAlign();
+    gap: 15px;
+  }
+
+  .tbt-card {
+    flex: 1;
+    border: 1px solid var(--border);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+
+    .tbtc-row {
+      @include flexAlign();
+      gap: 8px;
+    }
+
+    .tvtc-row-title {
+      font-size: 12px;
+      color: var(--textLight);
+    }
+
+    .tbtc-value {
+      font-size: 16px;
+      margin-top: 7.5px;
+    }
+
+    &.row {
+      @include setSpaceBetween();
+    }
+
+    &.net-profit {
+      background-image: linear-gradient(
+        rgba(239, 246, 255, 0.5),
+        rgba(236, 254, 255, 0.5)
+      );
+      border-color: rgba(190, 219, 255, 1);
+    }
+
+    &.prof {
+      background-image: linear-gradient(
+        rgba(240, 253, 244, 0.5),
+        rgba(236, 253, 245, 0.5)
+      );
+      border-color: rgba(185, 248, 207, 1);
+    }
+  }
+}

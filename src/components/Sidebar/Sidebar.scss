@@ -1,0 +1,114 @@
+@use "../../styles/mixins.scss" as *;
+
+.sidebar-comp {
+  width: 250px;
+  height: 100vh;
+  border-right: 1px solid var(--border);
+
+  .sc-head {
+    padding: 16px 17px;
+    @include flexAlign();
+    gap: 8px;
+
+    .sch-logo {
+      @include box(32px);
+      @include setToCenter();
+      background-color: var(--primary);
+      border-radius: 10px;
+      color: var(--white);
+    }
+
+    .sch-content {
+      @include fontProperties(16px, 400, var(--primary));
+    }
+  }
+
+  .sc-main-navigation {
+    margin: 10px 12px;
+    height: 48px;
+    background-color: var(--primary);
+    box-shadow: 0 8px 10px -6px #0ea5e966;
+    border-radius: 14px;
+    padding: 0 14px;
+    @include flexAlign();
+    gap: 12px;
+
+    .icon-xxx {
+      fill: #fff;
+    }
+
+    .scmn-icon {
+      @include box(20px);
+      border: 1px solid var(--white);
+    }
+
+    .scmn-label {
+      @include fontProperties(16px, 400, var(--white));
+    }
+  }
+
+  .sc-border {
+    height: 1px;
+    margin: 16px 20px;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .sc-body {
+    padding: 0 12px;
+    @include verticalFlex();
+    gap: 4px;
+  }
+}
+
+.scbi-item {
+  height: 46px;
+  padding: 0 12px;
+  @include flexAlign();
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  position: relative;
+
+  .scbi-icon {
+    @include box(20px);
+    @include setToCenter();
+  }
+
+  &.active {
+    border-color: var(--border);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(
+      rgba(43, 127, 255, 0.05),
+      rgba(10, 180, 236, 0.05)
+    );
+
+    .scbi-icon {
+      .icon-xxx {
+        fill: var(--primary);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include box(4px, 30px);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      background-image: linear-gradient(
+        rgba(43, 127, 255, 1),
+        rgba(10, 180, 236, 1)
+      );
+      box-shadow: 1px 2px 6px 0px #0ea5e966;
+    }
+  }
+}

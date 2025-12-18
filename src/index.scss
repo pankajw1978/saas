@@ -1,0 +1,45 @@
+:root {
+  --primary: #2b7fff;
+  --white: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: rgba(10, 10, 10, 1);
+  --textLight: rgba(113, 113, 130, 1);
+  --success: rgba(1, 196, 98, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.iconbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+
+  .ib-count {
+    height: 16px;
+    min-width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--white);
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.5);
+  }
+}

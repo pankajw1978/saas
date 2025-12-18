@@ -1,0 +1,79 @@
+@use "../../styles/mixins.scss" as *;
+
+.app-header {
+  height: 64px;
+  @include setSpaceBetween();
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+
+  .ah-left {
+    @include flexAlign();
+    gap: 30px;
+
+    .ah-ham {
+      background-color: #fbfbfb;
+      @include box(25px);
+      border-radius: 7px;
+      @include setToCenter();
+      flex-direction: column;
+      gap: 2px;
+
+      .ah-bar {
+        height: 2px;
+        width: 15px;
+        background-color: var(--text);
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .ah-right {
+    @include flexAlign();
+    gap: 8px;
+  }
+}
+
+.profile-comp {
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  @include flexAlign();
+  gap: 8px;
+  padding: 0 7px;
+
+  .pc-avatar {
+    @include box(32px);
+    @include setToCenter();
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  .pc-name {
+    color: var(--text);
+  }
+}
+
+.credit-comp {
+  @include flexAlign();
+  gap: 8px;
+  height: 42px;
+  border: 1px solid var(--border);
+  padding: 0 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.08);
+
+  .cc-icon {
+    @include box(16px);
+  }
+
+  .cc-label {
+    color: var(--textLight);
+
+    span {
+      color: var(--primary);
+    }
+  }
+}

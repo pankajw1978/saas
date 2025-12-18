@@ -1,0 +1,47 @@
+@use "../../styles/mixins.scss" as *;
+
+.dashboard {
+  padding: 20px 17px;
+
+  .dashboard-head {
+    @include setSpaceBetween();
+
+    .dh-left {
+      span {
+        color: var(--primary);
+      }
+    }
+
+    .dh-right {
+      @include flexAlign();
+      gap: 15px;
+    }
+  }
+
+  .dashboard-body {
+    margin-top: 20px;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 22px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.button {
+  height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--success);
+  @include flexAlign();
+  gap: 8px;
+  color: var(--success);
+  border-radius: 14px;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    0 2px 6px -1px rgba(1, 189, 124, 0.67);
+
+  &.edit {
+    border-color: transparent;
+    color: var(--primary);
+    box-shadow: 0 4px 6px -4px rgba(43, 127, 255, 0.1),
+      0 10px 15px -3px rgba(43, 127, 255, 0.1);
+  }
+}

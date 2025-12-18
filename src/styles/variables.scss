@@ -1,0 +1,147 @@
+:root {
+  --primary: #007ef3;
+  --textDark: #0d1324;
+  --textDark2: #000;
+  --text: #182027;
+  --textLight: #768995;
+  --textLight2: #bac1cb;
+  --textLight3: #586677;
+  --iconLight: #8191ac;
+  --iconLight2: #627886;
+  --iconLight3: rgba(116, 127, 148, 0.3);
+  --iconHome: #7e8b9f;
+  --white: #fff;
+  --primary: #ffaf2e;
+  --primaryBg: rgba(255, 175, 46, 0.15);
+  --secondary: #252b2b;
+  --mainLayoutBg: #f5f7f8;
+  --searchBg: #f5f7f8;
+  --lightBg: #f0f4f9;
+  --lightBg2: rgba(240, 244, 249, 0.3);
+  --placeholder: #a5b0c2;
+  --headingText: #06090f;
+  --inputBg: #eaeff0;
+  --radioInputActive: #2a3032;
+  --borderLight: #eef2f5;
+  --start: #eef7f7;
+  --secondaryBtn: #212626;
+  --secondaryBtnBorder: #303333;
+  --success: #16d76b;
+  --successLight: rgba(22, 215, 107, 0.1);
+  --paginationBg: #f8fafd;
+  --border2: #dfe5f0;
+  --btnLight: #eff2f5;
+  --timelineBg: #f0f3f566;
+  --label: #7a8c98;
+  --inputBorder: #c6d1e0;
+  --toggleBg: #c2d0e2;
+  --toggleActive: #3f4752;
+  --danger: #e12c41;
+  --dangerLight: rgba(225, 44, 65, 0.05);
+  --dangerLight2: rgba(225, 44, 65, 0.2);
+  --dangerLight3: rgba(225, 44, 65, 0.5);
+  --questionIndex: #efefef;
+  --questionDeleteIconBg: #f7f8f8;
+  --questionDeleteIconBgHover: #d0dce5;
+  --shadow-color: #26262629;
+  --separator-bg: #e4e9ef;
+  --separator-icon-bg: #ffc831;
+  --separator-bottom-icon-bg: #aab8cf;
+  --checkbox-orange: #f8af2f;
+  --checkbox-orange-hover: #ffaf2e;
+  --checkbox-border: #9ca6b7;
+  --content-border: #e4e9ef;
+  --header-border: #eef1f7;
+  --text-primary: #374151;
+  --text-secondary: #667181;
+  --menu-dots-color: #000000;
+  --hover-bg: #f3f4f6;
+  --tableBorder: #e9eff8;
+  --progressBarBlue: #2f7ef3;
+  --progressBarBlueBg: #cad2d6;
+  --inputIconBg: #f6f8fb;
+  --sidebarBlue: #2a72fa;
+  --pusula: #5b4ad4;
+  --pusulaDisabled: #7e8b9f;
+}
+
+@font-face {
+  font-family: "mecellem_bold";
+  src: url("https://www.mecellem.com/assets/fonts/Mecellem030822-Bold.woff2")
+      format("woff2"),
+    url("https://www.mecellem.com/assets/fonts/Mecellem030822-Bold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "mecellem_regular";
+  src: url("https://www.mecellem.com/assets/fonts/Mecellem030822-Regular.woff2")
+      format("woff2"),
+    url("https://www.mecellem.com/assets/fonts/Mecellem030822-Regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "mecellem_semibold";
+  src: url("https://www.mecellem.com/assets/fonts/Mecellem310822-SemiBold.woff")
+      format("woff2"),
+    url("https://www.mecellem.com/assets/fonts/Mecellem310822-SemiBold.woff2")
+      format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "mecellem_regular";
+  color: var(--textColor);
+}
+
+body {
+  background-color: var(--backgroundColor) !important;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 0px 24px;
+  align-items: center;
+  height: 75px;
+  background: white;
+  border-top: 1px solid #c0cede;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: mecellem_semibold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+  justify-content: center;
+}
+
+.cancel-button {
+  background: white;
+  color: #374151;
+  border-color: #d1d5db;
+  height: 35px;
+  font-family: mecellem_semibold;
+}
+
+.save-button {
+  background: #2f3333;
+  color: white;
+  border-color: #2f3333;
+  height: 35px;
+}
